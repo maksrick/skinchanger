@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKINCHANGER</title>
+    <style>
+        /* Стили для всей страницы */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        /* Боковая панель */
+        .sidebar {
+            width: 250px;
+            height: 100%;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .author-info {
+            text-align: center;
+        }
+
+        .author-info p {
+            margin-bottom: 20px;
+        }
+
+        .youtube-icon {
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+        }
+
+        /* Основной контент */
+        .content {
+            margin-left: 270px;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .skin-selection {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .buttons {
+            text-align: center;
+        }
+
+        /* Кнопки */
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <!-- Панель с автором -->
+    <div class="sidebar">
+        <div class="author-info">
+            <p>Автор: maksrick</p>
+            <a href="https://www.youtube.com/@maksrick" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube" class="youtube-icon">
+            </a>
+        </div>
+    </div>
+
+    <!-- Главный контент -->
+    <div class="content">
+        <div class="header">
+            <h1>SKINCHANGER</h1>
+        </div>
+
+        <div class="skin-selection">
+            <label for="skin">Выберите скин:</label>
+            <select id="skin">
+                <option value="skin1">Скин 1</option>
+                <option value="skin2">Скин 2</option>
+                <option value="skin3">Скин 3</option>
+                <!-- Добавь другие скины по мере необходимости -->
+            </select>
+        </div>
+
+        <div class="buttons">
+            <button id="playBtn">Играть</button>
+        </div>
+    </div>
+
+    <script>
+        // Получаем кнопку "Играть"
+        document.getElementById('playBtn').addEventListener('click', function() {
+            // Получаем выбранный скин
+            var selectedSkin = document.getElementById('skin').value;
+
+            // Выводим в консоль, какой скин выбран (для тестирования)
+            console.log("Выбран скин: " + selectedSkin);
+
+            // Здесь можно добавить логику для запуска файла или приложения
+            // Например, можно сделать переход на другую страницу с дополнительными данными
+            alert("Вы выбрали скин: " + selectedSkin);
+            
+            // Временно, для примера, сделаем редирект на YouTube канал
+            // window.location.href = "https://www.youtube.com/@maksrick";
+        });
+    </script>
+</body>
+</html>
